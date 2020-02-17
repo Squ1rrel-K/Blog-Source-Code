@@ -99,7 +99,7 @@ theme: ayer
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
    type: git
-   repo: https://github.com/Squ1rrel-K/Squ1rrel-K.github.io
+   repo: git@github.com:Squ1rrel-K/Squ1rrel-K.github.io.git
 
 # Hexo-generator-search
 search:
