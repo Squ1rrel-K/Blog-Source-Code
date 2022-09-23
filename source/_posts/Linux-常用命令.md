@@ -5,3 +5,12 @@ tags: coding
 ---
 
 # Linux 常用命令
+
+```shell
+cd
+```
+
+```shell
+ls
+```
+
