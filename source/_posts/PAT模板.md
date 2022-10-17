@@ -6,7 +6,7 @@ tags:
 
 # PAT-A-xxxx
 
-[所有甲级题全解](https://github.com/Squ1rrel-K/PAT-A-C-Cpp)
+[所有甲级题全解](https://github.com/Squ1rrel-K/PAT-A-CPP)
 
 [原题链接]()
 
