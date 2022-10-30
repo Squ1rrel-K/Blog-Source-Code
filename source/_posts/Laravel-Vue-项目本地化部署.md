@@ -1,6 +1,7 @@
 ---
 title: Laravel Vue 项目本地化部署
 date: 2022-10-14 10:20:41
+categories: tutorial
 tags: coding
 ---
 

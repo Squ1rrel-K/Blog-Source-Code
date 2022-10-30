@@ -1,6 +1,7 @@
 ---
 title: 常用 Markdown 数学公式
 date: 2022-10-06 10:25:30
+categories: tutorial
 tags: scientific research
 mathjax: true
 ---

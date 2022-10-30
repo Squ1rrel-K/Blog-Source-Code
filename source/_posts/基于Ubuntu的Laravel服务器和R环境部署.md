@@ -3,7 +3,8 @@ title: 基于 Ubuntu 的 Laravel 服务器部署
 date: 2022-07-26 19:07:10
 tags: coding
 categories:
-- 服务器部署
+- server
+- tutorial
 
 ---
 
