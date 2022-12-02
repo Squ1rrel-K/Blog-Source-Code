@@ -9,3 +9,6 @@ date: 2020-01-25 19:56:02
 [魏家劲的小站](https://weijiajin.com/)
 
 [猪小屁的小站](https://jayeve.com/)
+
+[Ricardo 的小站](https://ricardo-ping.github.io)
+

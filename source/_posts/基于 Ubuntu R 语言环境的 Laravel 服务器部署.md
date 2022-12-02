@@ -1,5 +1,5 @@
 ---
-title: 基于 Ubuntu 的 Laravel 服务器部署
+title: 基于 Ubuntu R 语言环境的 Laravel 服务器部署
 date: 2022-07-26 19:07:10
 tags: coding
 categories:
@@ -11,6 +11,8 @@ categories:
 # 基本信息
 
 服务器：百度云，2核/4GB内存/80GB磁盘/6Mbps带宽/Ubuntu ( ubuntu-20.04-amd64-20220507112023 ) 
+
+php: ^8.0
 
 Laravel：^7.0.1
 
@@ -28,7 +30,7 @@ Debian，Centos 在 R 语言的部署上各有问题，选择 Ubuntu ( ubuntu-20
 
 
 
-### 1. 获取最新版本的 R 语言
+### 1. 获取最新版本的 R 语言（^4.*）
 
 ```shell
 # 检查更新
@@ -64,6 +66,20 @@ $ sudo apt install --no-install-recommends r-base
 ```shell
 # 打开 R 交互式窗口
 $ R
+```
+
+### 4. 安装需要的依赖包
+
+```shell
+# 打开 R 交互式窗口
+$ R
+```
+
+```R
+# R 的交互命令行
+> install.packages("dependencesA")
+> install.packages("dependencesB")
+> install.packages("dependencesC")
 ```
 
 
@@ -113,17 +129,20 @@ exec
 
 ```shell
 # 进入目录，参数应与域名相符
-$ cd /www/wwwroot/120.48.100.162
+$ cd /www/wwwroot/siteRootPath
 
 # clone 项目
 $ git clone https://github.com/Squ1rrel-K/getLCAI_web.git
 
 $ cd getLCAI_web
 $ composer install
+$ npm install
 
 # 建立 .env 文件，生成密匙
 $ php -r "file_exists('.env') || copy('.env.example', '.env');"
 $ php artisan key:generate --ansi
+
+
 ```
 
 进入宝塔运维主页，选择 [网站]，添加站点，域名为网站域名，修改网站目录的运行目录为 /public 
@@ -137,9 +156,10 @@ $ php artisan key:generate --ansi
 storage，resources，scripts 权限必须至少 775
 
 ```shell
-$ cd /www/wwwroot/120.48.100.162/getLCAI_web
+$ cd /www/wwwroot/siteRootPath/getLCAI_web
 
 $ chmod -R 775 storage/
+$ chmod -R 777 storage/logs/
 $ chmod -R 775 resources/
 $ chmod -R 775 scripts/
 ```
@@ -149,7 +169,7 @@ $ chmod -R 775 scripts/
 ## 五. 优化项目部署
 
 ```shell
-$ cd /www/wwwroot/120.48.100.162/getLCAI_web
+$ cd /www/wwwroot/siteRootPath/getLCAI_web
 
 $ php artisan config:cache # 生成配置缓存
 $ php artisan route:cache # 生成路由缓存
